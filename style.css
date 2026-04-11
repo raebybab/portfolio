@@ -6,3 +6,97 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+body {
+  font: 100%/1.5 system-ui;
+
+  max-width: 100ch;
+  margin-inline: auto;
+  padding: 1em;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
+}
+
+nav {
+  border-bottom: 1px solid oklch(80% 3% 200);
+  margin-bottom: 1em;
+}
+
+:root {
+  --color-accent: oklch(65% 50% 0);
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+label, input, textarea, button {
+  display: block;
+  width: 100%;
+}
+
+input, textarea {
+  box-sizing: border-box;
+}
+
+label {
+  margin-block: 0.5em;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+button {
+  grid-column: 1 / -1;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
