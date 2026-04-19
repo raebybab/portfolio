@@ -47,9 +47,13 @@ input, textarea, button {
   font: inherit;
 }
 
-label, input, textarea, button {
+input, textarea, button {
   display: block;
   width: 100%;
+}
+
+label {
+  display: block;
 }
 
 input, textarea {
@@ -99,4 +103,41 @@ h1 {
 h1, h2, h3 {
   line-height: 1.1;
   text-wrap: balance;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav a:hover {
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+.color-scheme {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  z-index: 1000;
+}
+
+.color-scheme select {
+  width: auto !important;
+  max-width: 120px;
+}
+
+select {
+  font: inherit;
 }
