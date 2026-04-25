@@ -141,3 +141,29 @@ nav a:hover {
 select {
   font: inherit;
 }
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-size: 0.8rem;
+  color: gray;
+  letter-spacing: 0.05em;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+#profile-stats {
+  margin-top: 2em;
+}
