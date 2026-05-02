@@ -33,7 +33,7 @@ function renderPieChart(projectsGiven) {
   let sliceGenerator = d3.pie().value(d => d.value);
   let arcData = sliceGenerator(data);
   let arcs = arcData.map(d => arcGenerator(d));
-  
+
   arcs.forEach((arc, idx) => {
   svg.append('path')
     .attr('d', arc)
@@ -89,7 +89,7 @@ let query = '';
 let searchInput = document.querySelector('.searchBar');
 
 searchInput.addEventListener('input', (event) => {
-  query = event.target.value;
+  let query = event.target.value;
 
   let filteredProjects = projects.filter((project) => {
     let values = Object.values(project).join(' ').toLowerCase();
