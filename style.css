@@ -234,3 +234,41 @@ select {
 .selected {
   fill: oklch(60% 45% 0) !important;
 }
+
+.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 10px;
+  margin: 0;
+}
+
+.info dt {
+  opacity: 0.6;
+}
+
+.tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.info[hidden] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+circle.selected {
+  fill: #ff6b6b;
+  stroke: red;
+  stroke-width: 2px;
+}
+
+#selection-summary,
+#selection-breakdown {
+  margin-top: 20px;
+}
